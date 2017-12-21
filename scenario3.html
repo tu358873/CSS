@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>Scenario 3</title>
+
+</head>
+
+<body>
+<div>
+Employee Identity Numbers--
+<ul id="emp">
+<li>242433</li>
+<li>33232314345</li>
+<li>1234234241</li>
+<li>334532</li>
+<li>342424252</li>
+<li>9434434222</li>
+<li>95455531</li>
+<li>3424241134</li>
+<li>4425668972</li>
+<li>09974146324</li>
+</ul>
+</div>
+
+<script>
+
+		
+		var empIds = document.getElementById("emp").getElementsByTagName("li");
+		var List = [];
+		
+		
+		for (var i = 0; i < empIds.length; i++) {
+			List.push((empIds[i].innerText));
+			if (List[i].search("5") != -1) {
+				document.getElementsByTagName("li")[i].setAttribute("id",List[i]);
+				changeColor(List[i],'red');
+			}
+		}
+		function changeColor(id,color) {
+			var element = document.getElementById(id);
+			element.style.background = color;
+} 
+</script>
+</body>
+
+
+</html>
